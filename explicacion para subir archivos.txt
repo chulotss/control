@@ -1,0 +1,8 @@
+para pasar los archivos: 
+1. preparar los cambios. 
+git add. 
+2. poner un nombre al avance. 
+git commit -m "Explicacion breve de lo hecho" 
+3. subir a la nube. 
+git push 
+
