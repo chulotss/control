@@ -1,0 +1,5 @@
+xcp_utils.o: \
+ D:/MATLAB/R2025b/toolbox/coder/xcp/src/target/server/common/xcp_utils.c \
+ D:/MATLAB/R2025b/toolbox/coder/xcp/src/target/server/common/xcp_utils.h
+
+D:/MATLAB/R2025b/toolbox/coder/xcp/src/target/server/common/xcp_utils.h:

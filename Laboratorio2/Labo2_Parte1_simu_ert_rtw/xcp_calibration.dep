@@ -1,0 +1,56 @@
+xcp_calibration.o: \
+ D:/MATLAB/R2025b/toolbox/coder/xcp/src/target/server/protocol/src/xcp_calibration.c \
+ D:/MATLAB/R2025b/toolbox/coder/xcp/src/target/server/common/xcp_common.h \
+ D:/CONTRL/control/Laboratorio2/Labo2_Parte1_simu_ert_rtw/rtwtypes.h \
+ D:/MATLAB/R2025b/toolbox/coder/xcp/src/target/server/platform/include/xcp_platform.h \
+ C:/ProgramData/MATLAB/SupportPackages/R2025b/toolbox/target/supportpackages/arduinotarget/include/xcp_platform_custom.h \
+ C:\ProgramData\MATLAB\SupportPackages\R2025b\aCLI\data\packages\arduino/hardware/avr/1.8.3/cores/arduino/Arduino.h \
+ C:\ProgramData\MATLAB\SupportPackages\R2025b\aCLI\data\packages\arduino/hardware/avr/1.8.3/cores/arduino/binary.h \
+ C:\ProgramData\MATLAB\SupportPackages\R2025b\aCLI\data\packages\arduino/hardware/avr/1.8.3/variants/standard/pins_arduino.h \
+ D:/MATLAB/R2025b/toolbox/coder/xcp/src/target/server/include/xcp.h \
+ D:/MATLAB/R2025b/toolbox/coder/xcp/src/target/server/protocol/src/xcp_cfg.h \
+ D:/MATLAB/R2025b/toolbox/coder/xcp/src/target/server/protocol/src/xcp_calibration.h \
+ D:/MATLAB/R2025b/toolbox/coder/xcp/src/target/server/protocol/src/xcp_types.h \
+ D:/MATLAB/R2025b/toolbox/coder/xcp/src/target/server/protocol/src/xcp_calibration_types.h \
+ D:/MATLAB/R2025b/toolbox/coder/xcp/src/target/server/protocol/src/xcp_standard.h \
+ D:/MATLAB/R2025b/toolbox/coder/xcp/src/target/server/transport/include/xcp_transport_internal.h \
+ D:/MATLAB/R2025b/toolbox/coder/xcp/src/target/server/include/xcp_transport.h \
+ D:/MATLAB/R2025b/toolbox/coder/xcp/src/target/server/include/xcp.h \
+ D:/MATLAB/R2025b/toolbox/coder/xcp/src/target/server/platform/default/xcp_mem.h \
+ D:/MATLAB/R2025b/toolbox/coder/xcp/src/target/server/protocol/include/xcp_internal.h
+
+D:/MATLAB/R2025b/toolbox/coder/xcp/src/target/server/common/xcp_common.h:
+
+D:/CONTRL/control/Laboratorio2/Labo2_Parte1_simu_ert_rtw/rtwtypes.h:
+
+D:/MATLAB/R2025b/toolbox/coder/xcp/src/target/server/platform/include/xcp_platform.h:
+
+C:/ProgramData/MATLAB/SupportPackages/R2025b/toolbox/target/supportpackages/arduinotarget/include/xcp_platform_custom.h:
+
+C:\ProgramData\MATLAB\SupportPackages\R2025b\aCLI\data\packages\arduino/hardware/avr/1.8.3/cores/arduino/Arduino.h:
+
+C:\ProgramData\MATLAB\SupportPackages\R2025b\aCLI\data\packages\arduino/hardware/avr/1.8.3/cores/arduino/binary.h:
+
+C:\ProgramData\MATLAB\SupportPackages\R2025b\aCLI\data\packages\arduino/hardware/avr/1.8.3/variants/standard/pins_arduino.h:
+
+D:/MATLAB/R2025b/toolbox/coder/xcp/src/target/server/include/xcp.h:
+
+D:/MATLAB/R2025b/toolbox/coder/xcp/src/target/server/protocol/src/xcp_cfg.h:
+
+D:/MATLAB/R2025b/toolbox/coder/xcp/src/target/server/protocol/src/xcp_calibration.h:
+
+D:/MATLAB/R2025b/toolbox/coder/xcp/src/target/server/protocol/src/xcp_types.h:
+
+D:/MATLAB/R2025b/toolbox/coder/xcp/src/target/server/protocol/src/xcp_calibration_types.h:
+
+D:/MATLAB/R2025b/toolbox/coder/xcp/src/target/server/protocol/src/xcp_standard.h:
+
+D:/MATLAB/R2025b/toolbox/coder/xcp/src/target/server/transport/include/xcp_transport_internal.h:
+
+D:/MATLAB/R2025b/toolbox/coder/xcp/src/target/server/include/xcp_transport.h:
+
+D:/MATLAB/R2025b/toolbox/coder/xcp/src/target/server/include/xcp.h:
+
+D:/MATLAB/R2025b/toolbox/coder/xcp/src/target/server/platform/default/xcp_mem.h:
+
+D:/MATLAB/R2025b/toolbox/coder/xcp/src/target/server/protocol/include/xcp_internal.h:

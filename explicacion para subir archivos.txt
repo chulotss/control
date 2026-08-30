@@ -1,8 +1,111 @@
-para pasar los archivos: 
-1. preparar los cambios. 
-git add. 
-2. poner un nombre al avance. 
-git commit -m "Explicacion breve de lo hecho" 
-3. subir a la nube. 
-git push 
+1. SUBIR UN PROYECTO DESDE CERO
+En GitHub
+Iniciar sesión en GitHub.
+Crear un repositorio.
+Copiar la URL del repositorio.
+En la carpeta del proyecto
 
+Abrir Git Bash dentro de la carpeta:
+
+git init
+git add .
+git commit -m "Primer commit"
+git remote add origin URL_DEL_REPOSITORIO.git
+git branch -M main
+git push -u origin main
+
+Si el repositorio ya está configurado con master, usar master en lugar de main.
+
+2. SUBIR CAMBIOS
+
+Después de modificar o agregar archivos:
+
+git add .
+git status 
+git commit -m "Descripción breve del cambio"
+git push
+Ejemplo:
+git add .
+git status 
+git commit -m "Agregado control del motor"
+git push
+3. DESCARGAR EL PROYECTO EN OTRA LAPTOP
+Primera vez
+
+No usar git init.
+
+Clonar directamente el repositorio:
+
+git clone https://github.com/chulotss/Instru.git
+
+Después entrar a la carpeta:
+
+cd Instru
+4. ACTUALIZAR EL PROYECTO
+
+Antes de comenzar a trabajar en cualquier computadora:
+
+git pull
+
+Esto descarga los cambios que hayan subido los demás.
+
+5. FLUJO NORMAL DE TRABAJO
+Antes de trabajar:
+git pull
+Trabajar en el código...
+Cuando termines:
+git add .
+git commit -m "Descripción del cambio"
+git push
+6. COMANDOS ÚTILES
+Ver el estado del proyecto
+git status
+Ver la rama actual
+git branch
+Ver el repositorio conectado
+git remote -v
+Ver el historial de commits
+git log --oneline
+⚠️ ERRORES COMUNES
+remote origin already exists
+
+Ya existe una conexión con GitHub.
+
+No ejecutar nuevamente:
+
+git remote add origin ...
+
+Comprobarla con:
+
+git remote -v
+src refspec main does not match any
+
+La rama local probablemente se llama master.
+
+Comprobar:
+
+git branch
+
+Si aparece master y quieres cambiarla a main:
+
+git branch -M main
+git push -u origin main
+Permission denied / 403
+
+GitHub está usando una cuenta que no tiene permiso sobre el repositorio.
+
+Revisar las credenciales de GitHub guardadas en Windows y comprobar que estás iniciando sesión con la cuenta correcta.
+
+REGLA PRINCIPAL PARA TRABAJAR EN EQUIPO
+
+Antes de empezar:
+
+git pull
+
+Después de terminar:
+
+git add .
+git commit -m "Qué hice"
+git push
+
+Así todos trabajan sobre la versión más reciente del proyecto.
