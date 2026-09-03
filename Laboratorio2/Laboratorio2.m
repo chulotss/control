@@ -1,7 +1,7 @@
 clc; clear; close all;
 
 modeloBoard = 'Uno';
-puertoCOM = 'COM7';
+puertoCOM = 'COM5';
 %CONEXION ARDUINO
 try 
     a=arduino(puertoCOM, modeloBoard, 'Libraries','RotaryEncoder');
@@ -12,8 +12,8 @@ end
 %PIN POTENCIOMETRO 
 pinPot= 'A2';
 %PINES MOTOR 
-pinDir1 = 'D8';
-pinDir2 = 'D9';
+pinDir2 = 'D8';
+pinDir1 = 'D9';
 pinPWM = 'D10';
 pinEncA = 'D2';
 pinEncB = 'D3';

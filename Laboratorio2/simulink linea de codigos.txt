@@ -1,0 +1,68 @@
+Ahora sí tenemos **el problema exacto**. Y es distinto al `Acceso denegado` anterior.
+
+Simulink te está diciendo:
+
+> Tu carpeta actual contiene `Labo2parte2_ert_rtw`, pero le dijimos que la generación de código debe ir a `C:\MATLAB_BUILD\codegen`.
+
+MathWorks recomienda justamente eliminar los artefactos de generación que quedaron en la carpeta actual cuando se cambia `CodeGenFolder`. ([MathWorks][1])
+
+### Haz esto
+
+**1. Cierra el modelo `Labo2parte2` en Simulink**.
+
+Puedes ejecutar:
+
+```matlab
+close_system('Labo2parte2',0)
+```
+
+**2. En MATLAB cambia a la carpeta del proyecto**, que ya sé que es:
+
+```matlab
+cd('C:\Users\Froilán Pardo\Documents\Ezequiel\controlPL\control\Laboratorio2')
+```
+
+**3. Elimina SOLO esta carpeta generada:**
+
+```text
+Labo2parte2_ert_rtw
+```
+
+Puedes hacerlo directamente desde MATLAB:
+
+```matlab
+rmdir('Labo2parte2_ert_rtw','s')
+```
+
+⚠️ **Esta carpeta es código generado**, no es tu archivo `Labo2parte2.slx`. No borres el `.slx`.
+
+**4. También eliminemos el caché generado local si existe:**
+
+```matlab
+if exist('slprj','dir')
+    rmdir('slprj','s')
+end
+```
+
+**5. Vuelve a abrir el modelo:**
+
+```matlab
+open_system('Labo2parte2')
+```
+
+**6. Y vuelve a comprobar que Arduino siga apuntando al lugar correcto:**
+
+```matlab
+setenv('ARDUINO_STATIC_LIB_PATH','C:\MATLAB_BUILD\ArduinoStaticLibrary')
+```
+
+Después dale **Build/Deploy**.
+
+La razón de hacer esto es que `CodeGenFolder` controla dónde Simulink coloca el código generado, mientras que los archivos que ya estaban en la carpeta `Laboratorio2` quedaron de una compilación anterior. ([MathWorks][1])
+
+**No borres ninguna otra carpeta ni archivo del proyecto.**
+
+[1]: https://www.mathworks.com/help/rtw/ug/build-process-folders.html?utm_source=chatgpt.com "Manage Build Process Folders - MATLAB & Simulink"
+
+
+x
