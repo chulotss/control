@@ -1,0 +1,9 @@
+# Simulink generated files
+*_ert_rtw/
+slprj/
+*.slxc
+
+# Compiled Arduino outputs
+*.elf
+*.hex
+*.eep
