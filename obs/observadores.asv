@@ -1,0 +1,27 @@
+clear; clc; 
+%primero definir las matrices 
+A=[0 1;-2 -3 ];
+B=[0;1];
+C=[1 0];
+D=0;
+%hacer todo el procedimiento 
+%mejor hacer el procedimiento mas que usar obsv
+Obs=[C;C*A];
+%ver el rango y analizar observabilidad 
+disp(rank(Obs));
+polos=[-5 -6];
+%Lprueba=[l1;l2]
+L=[8;4];
+%para ver si esta bien lo hecho manualmente puedo corroborar con el comando
+%eig 
+pp=eig(A-(L*C))
+disp(pp);
+
+%variable inicial para las condiciones iniciales 
+
+x0=[0;0];
+
+
+%espacio de estados del motor 
+%sirve para poder hacerretrolimentacion de estados de toda la dinamica del
+%sis

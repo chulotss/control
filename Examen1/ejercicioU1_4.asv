@@ -1,0 +1,7 @@
+syms x
+A=[1/2 1; -2 1];
+B=[0;1]:
+f = log(x + 1);
+
+disp(diff(f))
+cos(0)

@@ -5,7 +5,7 @@ clc; clear; close all;
 
 %% 1. CONEXIÓN ARDUINO - MATLAB
 modeloBoard = 'Uno'; % Cambiar a 'Uno' si aplica
-puertoCOM   = 'COM4';
+puertoCOM   = 'COM5';
 
 try
     a = arduino(puertoCOM, modeloBoard, 'Libraries', 'RotaryEncoder');

@@ -1,0 +1,92 @@
+clc;
+clear;
+close all;
+
+puertoCOM = "COM10";
+modeloBoard = "Mega2560";
+
+a = arduino(puertoCOM, modeloBoard, ...
+    'Libraries', 'RotaryEncoder');
+
+encoder1 = rotaryEncoder(a, 'D2', 'D3');
+encoder2 = rotaryEncoder(a, 'D19', 'D18');
+
+resetCount(encoder1);
+resetCount(encoder2);
+
+Ts = 0.1;
+tiempoPrueba = 30;
+
+fprintf('\n');
+fprintf('============================================================\n');
+fprintf('             PRUEBA DE ENCODERS EN MATLAB\n');
+fprintf('============================================================\n');
+fprintf('Encoder 1: A = D2   B = D3\n');
+fprintf('Encoder 2: A = D18  B = D19\n');
+fprintf('Duracion: %.1f segundos\n', tiempoPrueba);
+fprintf('Periodo de lectura: %.2f segundos\n', Ts);
+fprintf('============================================================\n\n');
+
+fprintf('GIRA LAS RUEDAS MANUALMENTE\n\n');
+
+fprintf('%10s %15s %15s\n', ...
+    'Tiempo [s]', 'Encoder 1', 'Encoder 2');
+
+fprintf('-----------------------------------------------\n');
+
+figure('Name','Prueba de Encoders');
+
+h1 = animatedline( ...
+    'Color',[0 0.4470 0.7410], ...
+    'LineWidth',1.8);
+
+h2 = animatedline( ...
+    'Color',[0.8500 0.3250 0.0980], ...
+    'LineWidth',1.8);
+
+grid on;
+
+xlabel('Tiempo [s]');
+ylabel('Ticks');
+
+title('Lectura de Encoders en Tiempo Real');
+
+legend('Encoder 1','Encoder 2', ...
+    'Location','northwest');
+
+tInicio = tic;
+
+while true
+
+    tiempo = toc(tInicio);
+
+    if tiempo >= tiempoPrueba
+        break;
+    end
+
+    ticks1 = readCount(encoder1);
+    ticks2 = readCount(encoder2);
+
+    addpoints(h1, tiempo, ticks1);
+    addpoints(h2, tiempo, ticks2);
+
+    drawnow limitrate;
+
+    fprintf('%10.2f %15d %15d\n', ...
+        tiempo, ticks1, ticks2);
+
+    pause(Ts);
+end
+
+ticks1Final = readCount(encoder1);
+ticks2Final = readCount(encoder2);
+
+fprintf('\n');
+fprintf('============================================================\n');
+fprintf('                    RESULTADO FINAL\n');
+fprintf('============================================================\n');
+
+fprintf('Encoder 1 = %d ticks\n', ticks1Final);
+fprintf('Encoder 2 = %d ticks\n', ticks2Final);
+
+fprintf('============================================================\n');
